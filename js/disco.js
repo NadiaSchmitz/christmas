@@ -39,7 +39,7 @@ var caramel_2 = [625, 626, 627, 628, 674, 675, 676, 677, 821, 822, 823, 824, 870
 $(document).ready(function() {
   var windowsWidth = $(window).width();
   var windowsHeight = $(window).height();
-  var numberHeight = 33;
+  var numberHeight = 36;
   var numberWidth = 50;
 
   var lampWrapperHeight = Math.floor((windowsHeight - 80) / numberHeight - 2);
@@ -72,77 +72,68 @@ $(document).ready(function() {
     $(lamps[i]).attr('data-number', i);
   }
 
-  /*function lampsDisco() {
-    for (var i = 0; i < lamps.length; i++) {
-      var classI = Math.floor(Math.random() * colorClass.length);
-      $(lamps[i]).attr('id', '');
-      $(lamps[i]).attr('id', colorClass[classI]);
-    }
-  }*/
   function clearAll() {
     for (var i = 0; i < number; i++) {
       $(lamps[i]).attr('id', '');
     }
   }
 
-  function borderFirstLevelTwoColors(color_a, color_b) {
-    /*All lamps out*/
-    /*for (var i = 0; i < lamps.length; i++) {
-      $(lamps[i]).attr('id', '');
-    }*/
+  var square = lamps.slice();
 
-    /*Border 2 rows top*/
-    for (var i = 0; i < numberWidth * 2; i = i + 2) {
-      $(lamps[i]).attr('id', color_a);
-    }
+  square.splice(0, 100);
+  square.splice(1600, 100);
 
-    for (var i = 1; i < numberWidth * 2; i = i + 2) {
-      $(lamps[i]).attr('id', color_b);
-    }
+  for (var i = 0; i < 1600; i = i + 49) {
+    square.splice(i, 1);
+  }
 
-    /*Border 2 rows bottom*/
-    for (var i = number; i >= number - numberWidth * 2; i--) {
-      if (i % 2 == 0) {
-        $(lamps[i]).attr('id', color_a);
-      }
-      else {
-        $(lamps[i]).attr('id', color_b);
-      }
-    }
+  for (var i = 0; i < 1600; i = i + 48) {
+    square.splice(i, 1);
+  }
 
-    /*Border 2 columns left*/
-    for (var i = 100; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_a);
-    }
+  for (var i = 47; i < 1600; i = i + 47) {
+    square.splice(i, 1);
+  }
 
-    for (var i = 101; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_a);
-    }
+  for (var i = 46; i < 1600; i = i + 46) {
+    square.splice(i, 1);
+  }
 
-    for (var i = 150; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_b);
-    }
+  var borderAll = lamps.slice();
 
-    for (var i = 151; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_b);
-    }
+  borderAll.splice();
 
-    /*Border 2 columns left*/
-    for (var i = 148; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_a);
-    }
+  for (var i = 102; i < 228; i = i + 4) {
+    borderAll.splice(i, 46);
+  }
+  
+  var borderLevel1 = lamps.slice();
 
-    for (var i = 149; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_a);
-    }
+  for (var i = 51; i < 118; i = i + 2) {
+    borderLevel1.splice(i, 48);
+  }
 
-    for (var i = 198; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_b);
-    }
+  var borderLevel2 = lamps.slice();
 
-    for (var i = 199; i < number - 100; i = i + 100) {
-      $(lamps[i]).attr('id', color_b);
-    }
+  borderLevel2.splice(0, 50);
+  borderLevel2.splice(1700, 50)
+
+  
+
+  for (var i = 0; i < 1650; i = i + 49) {
+    borderLevel2.splice(i, 1);
+  }
+
+  for (var i = 48; i < 1650; i = i + 48) {
+    borderLevel2.splice(i, 1);
+  }
+
+  for (var i = 49; i < 112; i = i + 2) {
+    borderLevel2.splice(i, 46);
+  }
+
+  for (var i = 0; i < borderLevel2.length; i++) {
+    $(borderLevel2[i]).attr('id', 'color_4');
   }
 
   function textMC(color_a) {
@@ -240,9 +231,7 @@ $(document).ready(function() {
   }
 
   function frame_1() {
-    clearAll()
-    textMC(colorClass[0]);
-    borderFirstLevelTwoColors(colorClass[7], colorClass[0]);
+    
   }
   
   function frame_2() {
