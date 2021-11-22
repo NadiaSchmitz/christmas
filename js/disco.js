@@ -72,12 +72,6 @@ $(document).ready(function() {
     $(lamps[i]).attr('data-number', i);
   }
 
-  function clearAll() {
-    for (var i = 0; i < number; i++) {
-      $(lamps[i]).attr('id', '');
-    }
-  }
-
   var square = lamps.slice();
 
   square.splice(0, 100);
@@ -118,8 +112,6 @@ $(document).ready(function() {
   borderLevel2.splice(0, 50);
   borderLevel2.splice(1700, 50)
 
-  
-
   for (var i = 0; i < 1650; i = i + 49) {
     borderLevel2.splice(i, 1);
   }
@@ -134,6 +126,65 @@ $(document).ready(function() {
 
   for (var i = 0; i < borderLevel2.length; i++) {
     $(borderLevel2[i]).attr('id', 'color_4');
+  }
+  
+  function clearAll() {
+    for (var i = 0; i < number; i++) {
+      $(lamps[i]).attr('id', '');
+    }
+  }
+
+  function clearBorder() {
+    for (var i = 0; i < lamps.length; i++) {
+      for (var j = 0; j < borderAll.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderAll[j]).attr('data-number'))) {
+          $(lamps[i]).attr('id', '');
+        }
+      }
+    }
+  }
+
+  function clearSquare() {
+    for (var i = 0; i < lamps.length; i++) {
+      for (var j = 0; j < square.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(square[j]).attr('data-number'))) {
+          $(lamps[i]).attr('id', '');
+        }
+      }
+    }
+  }
+clearSquare()
+  function borderAllMC(color_a) {
+    for (var i = 0; i < lamps.length; i++) {
+      for (var j = 0; j < borderAll.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderAll[j]).attr('data-number'))) {
+          clearBorder();
+          $(lamps[i]).attr('id', color_a);
+        }
+      }
+    }
+  }
+
+  function borderLevel1MC(color_a) {
+    for (var i = 0; i < lamps.length; i++) {
+      for (var j = 0; j < borderLevel1.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderLevel1[j]).attr('data-number'))) {
+          clearBorder();
+          $(lamps[i]).attr('id', color_a);
+        }
+      }
+    }
+  }
+
+  function borderLevel2MC(color_a) {
+    for (var i = 0; i < lamps.length; i++) {
+      for (var j = 0; j < borderLevel2.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderLevel2[j]).attr('data-number'))) {
+          clearBorder();
+          $(lamps[i]).attr('id', color_a);
+        }
+      }
+    }
   }
 
   function textMC(color_a) {
@@ -230,31 +281,43 @@ $(document).ready(function() {
     }
   }
 
+  function borderPlay() {
+    borderAllMC(colorClass[1]);
+    setTimeout(borderLevel1MC, 1000, colorClass[3])
+    setTimeout(borderLevel2MC, 3000, colorClass[5])
+    setTimeout(borderAllMC, 5000, colorClass[7])
+    setTimeout(borderLevel1MC, 7000, colorClass[2])
+    setTimeout(borderLevel2MC, 9000, colorClass[4])
+  }
+
+  
+
   function frame_1() {
+    setInterval(borderPlay, 6000);
     
   }
   
   function frame_2() {
     treeMC()
-    borderFirstLevelTwoColors(colorClass[4], colorClass[5]);
+    
 }
   
   function frame_3() {
     clearAll()
     ballMC(colorClass[2], colorClass[4], colorClass[5], colorClass[6], colorClass[2])
-    borderFirstLevelTwoColors(colorClass[4], colorClass[2]);
+    
   }
 
   function frame_4() {
-    clearAll()
+    //clearAll()
     candleMC_1(colorClass[0], colorClass[2])
-    borderFirstLevelTwoColors(colorClass[1], colorClass[0]);
+    
   }
 
   function frame_5() {
-    clearAll()
+    //clearAll()
     caramelMC(colorClass[0], colorClass[7])
-    borderFirstLevelTwoColors(colorClass[4], colorClass[3]);
+    
   }
 
   function clip() {
