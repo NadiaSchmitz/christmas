@@ -10,6 +10,10 @@ var colorClass = [
   "color_8"
 ];
 
+var borderLevel1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,99,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1750,1751,1752,1753,1754,1755,1756,1757,1758,1759,1760,1761,1762,1763,1764,1765,1766,1767,1768,1769,1770,1771,1772,1773,1774,1775,1776,1777,1778,1779,1780,1781,1782,1783,1784,1785,1786,1787,1788,1789,1790,1791,1792,1793,1794,1795,1796,1797,1798,1799,149,199,249,299,349,399,449,499,549,599,649,699,749,799,849,899,949,999,1049,1099,1149,1199,1249,1299,1349,1399,1449,1499,1549,1599,1649,1699,1749];
+
+var borderLevel2 = [51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,101,151,201,251,301,351,401,451,501,551,601,651,701,751,801,851,901,951,1001,1051,1101,1151,1201,1251,1301,1351,1401,1451,1501,1551,1601,1651,1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711,1712,1713,1714,1715,1716,1717,1718,1719,1720,1721,1722,1723,1724,1725,1726,1727,1728,1729,1730,1731,1732,1733,1734,1735,1736,1737,1738,1739,1740,1741,1742,1743,1744,1745,1746,1747,1748,148,198,248,298,348,398,448,498,548,598,648,698,748,798,848,898,948,998,1048,1098,1148,1198,1248,1298,1348,1398,1448,1498,1548,1598,1648,1698];
+
 var text = [467, 468, 469, 471, 472, 475, 476, 477, 479, 481, 483, 484, 517, 521, 523, 525, 527, 529, 531, 533, 567, 568, 571, 572, 575, 577, 579, 580, 581, 583, 584, 617, 621, 622, 625, 627, 629, 631, 633, 667, 671, 673, 675, 676, 677, 679, 681, 683, 684, 804, 808, 810, 811, 813, 815, 817, 819, 822, 825, 829, 830, 832, 834, 836, 837, 838, 840, 841, 843, 846, 854, 858, 860, 863, 865, 867, 867, 869, 870, 872, 874, 876, 878, 882, 884, 887, 890, 893, 894, 896, 904, 906, 908, 910, 911, 913, 915, 916, 917, 919, 921, 922, 924, 926, 928, 932, 933, 934, 937, 940, 941, 943, 945, 946, 955, 957, 960, 963, 965, 967, 969, 972, 974, 975, 976, 978, 982, 984, 987, 990, 993, 996, 1005, 1007, 1010, 1011, 1013, 1015, 1017, 1019, 1022, 1024, 1026, 1029, 1030, 1032, 1034, 1037, 1040, 1041, 1043, 1046];
 
 var tree = [174, 175, 224, 225, 274, 275, 323, 324, 325, 326, 373, 374, 375, 376, 423, 424, 425, 426, 472, 473, 474, 475, 476, 477, 522, 523, 524, 525, 526, 527, 572, 573, 574, 575, 576, 577, 621, 622, 623, 624, 625, 626, 627, 628, 671, 672, 673, 674, 675, 676, 677, 678, 721, 722, 723, 724, 725, 726, 727, 728, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1168, 1169, 1170, 1171, 1172, 1173, 1174, 1175, 1176, 1177, 1178, 1179, 1180, 1181, 1217, 1218, 1219, 1220, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1228, 1229, 1230, 1231, 1232, 1267, 1268, 1269, 1270, 1271, 1272, 1273, 1274, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1317, 1318, 1319, 1320, 1321, 1322, 1323, 1324, 1325, 1326, 1327, 1328, 1329, 1330, 1331, 1332, 1366, 1367, 1368, 1369, 1370, 1371, 1372, 1373, 1374, 1375, 1376, 1377, 1378, 1379, 1380, 1381, 1382, 1383, 1416, 1417, 1418, 1419, 1420, 1421, 1422, 1423, 1424, 1425, 1426, 1427, 1428, 1429, 1430, 1431, 1432, 1433, 1467, 1468, 1469, 1470, 1471, 1472, 1473, 1474, 1475, 1476, 1477, 1478, 1479, 1480, 1481, 1482];
@@ -72,62 +76,6 @@ $(document).ready(function() {
     $(lamps[i]).attr('data-number', i);
   }
 
-  var square = lamps.slice();
-
-  square.splice(0, 100);
-  square.splice(1600, 100);
-
-  for (var i = 0; i < 1600; i = i + 49) {
-    square.splice(i, 1);
-  }
-
-  for (var i = 0; i < 1600; i = i + 48) {
-    square.splice(i, 1);
-  }
-
-  for (var i = 47; i < 1600; i = i + 47) {
-    square.splice(i, 1);
-  }
-
-  for (var i = 46; i < 1600; i = i + 46) {
-    square.splice(i, 1);
-  }
-
-  var borderAll = lamps.slice();
-
-  borderAll.splice();
-
-  for (var i = 102; i < 228; i = i + 4) {
-    borderAll.splice(i, 46);
-  }
-  
-  var borderLevel1 = lamps.slice();
-
-  for (var i = 51; i < 118; i = i + 2) {
-    borderLevel1.splice(i, 48);
-  }
-
-  var borderLevel2 = lamps.slice();
-
-  borderLevel2.splice(0, 50);
-  borderLevel2.splice(1700, 50)
-
-  for (var i = 0; i < 1650; i = i + 49) {
-    borderLevel2.splice(i, 1);
-  }
-
-  for (var i = 48; i < 1650; i = i + 48) {
-    borderLevel2.splice(i, 1);
-  }
-
-  for (var i = 49; i < 112; i = i + 2) {
-    borderLevel2.splice(i, 46);
-  }
-
-  for (var i = 0; i < borderLevel2.length; i++) {
-    $(borderLevel2[i]).attr('id', 'color_4');
-  }
-  
   function clearAll() {
     for (var i = 0; i < number; i++) {
       $(lamps[i]).attr('id', '');
@@ -136,40 +84,46 @@ $(document).ready(function() {
 
   function clearBorder() {
     for (var i = 0; i < lamps.length; i++) {
-      for (var j = 0; j < borderAll.length; j++) {
-        if ($(lamps[i]).attr('data-number') == ($(borderAll[j]).attr('data-number'))) {
+      for (var j = 0; j < borderLevel1.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderLevel1[j]).attr('data-number'))) {
+          $(lamps[i]).attr('id', '');
+        }
+      }
+      for (var j = 0; j < borderLevel2.length; j++) {
+        if ($(lamps[i]).attr('data-number') == ($(borderLevel2[j]).attr('data-number'))) {
           $(lamps[i]).attr('id', '');
         }
       }
     }
   }
 
-  function clearSquare() {
-    for (var i = 0; i < lamps.length; i++) {
-      for (var j = 0; j < square.length; j++) {
-        if ($(lamps[i]).attr('data-number') == ($(square[j]).attr('data-number'))) {
-          $(lamps[i]).attr('id', '');
-        }
-      }
-    }
-  }
-clearSquare()
-  function borderAllMC(color_a) {
-    for (var i = 0; i < lamps.length; i++) {
-      for (var j = 0; j < borderAll.length; j++) {
-        if ($(lamps[i]).attr('data-number') == ($(borderAll[j]).attr('data-number'))) {
-          clearBorder();
-          $(lamps[i]).attr('id', color_a);
-        }
-      }
-    }
-  }
+  // function clearSquare() {
+  //   for (var i = 0; i < lamps.length; i++) {
+  //     for (var j = 0; j < square.length; j++) {
+  //       if ($(lamps[i]).attr('data-number') == ($(square[j]).attr('data-number'))) {
+  //         $(lamps[i]).attr('id', '');
+  //       }
+  //     }
+  //   }
+  // }
+
+  // function borderAllMC(color_a) {
+  //   for (var i = 0; i < lamps.length; i++) {
+  //     for (var j = 0; j < borderAll.length; j++) {
+  //       if ($(lamps[i]).attr('data-number') == ($(borderAll[j]).attr('data-number'))) {
+  //         clearBorder();
+  //         $(lamps[i]).attr('id', color_a);
+  //       }
+  //     }
+  //   }
+  // }
+
 
   function borderLevel1MC(color_a) {
     for (var i = 0; i < lamps.length; i++) {
       for (var j = 0; j < borderLevel1.length; j++) {
-        if ($(lamps[i]).attr('data-number') == ($(borderLevel1[j]).attr('data-number'))) {
-          clearBorder();
+        if ($(lamps[i]).attr('data-number') == borderLevel1[j]) {
+          console.log($(borderLevel1[3]).attr('data-number'))
           $(lamps[i]).attr('id', color_a);
         }
       }
@@ -179,7 +133,7 @@ clearSquare()
   function borderLevel2MC(color_a) {
     for (var i = 0; i < lamps.length; i++) {
       for (var j = 0; j < borderLevel2.length; j++) {
-        if ($(lamps[i]).attr('data-number') == ($(borderLevel2[j]).attr('data-number'))) {
+        if ($(lamps[i]).attr('data-number') == borderLevel2[j]) {
           clearBorder();
           $(lamps[i]).attr('id', color_a);
         }
@@ -281,55 +235,57 @@ clearSquare()
     }
   }
 
-  function borderPlay() {
-    borderAllMC(colorClass[1]);
-    setTimeout(borderLevel1MC, 1000, colorClass[3])
-    setTimeout(borderLevel2MC, 3000, colorClass[5])
-    setTimeout(borderAllMC, 5000, colorClass[7])
-    setTimeout(borderLevel1MC, 7000, colorClass[2])
-    setTimeout(borderLevel2MC, 9000, colorClass[4])
-  }
+  borderLevel2MC(colorClass[5])
 
+  // function borderPlay() {
+  //   setTimeout(borderLevel1MC, 1000, colorClass[3])
+  //   setTimeout(borderLevel2MC, 3000, colorClass[5])
+  //   setTimeout(borderLevel1MC, 7000, colorClass[2])
+  //   setTimeout(borderLevel2MC, 9000, colorClass[4])
+  // }
+
+  // borderPlay()
+
+//   function frame_1() {
+//     borderPlay()
+//     setInterval(borderPlay, 6000);
+    
+//   }
+  
+//   function frame_2() {
+//     treeMC()
+    
+// }
+  
+//   function frame_3() {
+//     clearAll()
+//     ballMC(colorClass[2], colorClass[4], colorClass[5], colorClass[6], colorClass[2])
+    
+//   }
+
+//   function frame_4() {
+//     //clearAll()
+//     candleMC_1(colorClass[0], colorClass[2])
+    
+//   }
+
+//   function frame_5() {
+//     //clearAll()
+//     caramelMC(colorClass[0], colorClass[7])
+    
+//   }
+
+//   function clip() {
+//   frame_1();
+//   setTimeout(frame_2, 5000);
+//   setTimeout(frame_3, 10000);
+//   setTimeout(frame_4, 15000);
+//   setTimeout(frame_5, 20000);
+//   setTimeout(frame_1, 25000);
+//   }
+
+// clip()
   
 
-  function frame_1() {
-    setInterval(borderPlay, 6000);
-    
-  }
-  
-  function frame_2() {
-    treeMC()
-    
-}
-  
-  function frame_3() {
-    clearAll()
-    ballMC(colorClass[2], colorClass[4], colorClass[5], colorClass[6], colorClass[2])
-    
-  }
-
-  function frame_4() {
-    //clearAll()
-    candleMC_1(colorClass[0], colorClass[2])
-    
-  }
-
-  function frame_5() {
-    //clearAll()
-    caramelMC(colorClass[0], colorClass[7])
-    
-  }
-
-  function clip() {
-  frame_1();
-  setTimeout(frame_2, 5000);
-  setTimeout(frame_3, 10000);
-  setTimeout(frame_4, 15000);
-  setTimeout(frame_5, 20000);
-  setTimeout(frame_1, 25000);
-  }
-
-clip()
-  
 
 });
