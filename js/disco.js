@@ -245,7 +245,7 @@ function treeMC() {
 
   $(document).ready(function() {
     var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', './audio/christmas.mp3');
+    audioElement.setAttribute('src', './audio/christmas_music.mp3');
     audioElement.setAttribute('autoplay', 'autoplay');
     $.get();
     audioElement.addEventListener("load", function() {
@@ -339,7 +339,3 @@ function frame_2() {
     setTimeout(frame_2, 56000);
     setTimeout(textMC, 64000, colorClass[0], colorClass[4], colorClass[6]);
   }
-
-
-
-

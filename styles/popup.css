@@ -13,8 +13,8 @@
   width: 500px;
   min-height: 300px;
   border-radius: 5px;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 28px;
   color: #ffffff;
   text-align: center;
   background-color: #262222;
@@ -25,7 +25,7 @@
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
   margin: 250px auto 0px auto;
-  padding: 20px;
+  padding: 40px;
 }
 
 .popup_close {
@@ -37,15 +37,15 @@
 }
 
 .popup_text {
-  margin: 40px;
+  margin: 30px 0 30px 0;
 }
 
 .button {
   display: inline-block;
   vertical-align: top;
   width: 150px;
+  border-radius: 3px;
   line-height: 40px;
-  font-weight: 700;
   color: #ffffff;
   background-color: rgba(255, 115, 115, 1);
 }
