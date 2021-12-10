@@ -55,3 +55,15 @@
   margin: 0 20px 0 0;
 }
 
+@media only screen and (max-width: 700px) {
+  .popup_content {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .popup_content {
+    width: calc(100% - 40px);
+  }
+}
+
