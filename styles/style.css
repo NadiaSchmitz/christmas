@@ -49,7 +49,7 @@ body {}
   vertical-align: top;
   box-sizing: border-box;
   margin: 1px;
-  padding: 3px;
+  padding: 2px;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(242, 245, 247, 0.4);
   -moz-box-shadow: 2px 2px 5px 0px rgba(242, 245, 247, 0.4);
   box-shadow: 2px 2px 5px 0px rgba(242, 245, 247, 0.3);
@@ -124,6 +124,16 @@ audio {
 }
 
 @media only screen and (max-width: 1000px) {
+  .mobile {
+    display: block;
+  }
+
+  .desk {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 720px) {
   .mobile {
     display: block;
   }

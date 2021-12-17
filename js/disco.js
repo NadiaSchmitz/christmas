@@ -70,8 +70,8 @@ var numberWidth = 50;
   $('<div></div>').appendTo('.lamp_wrapper');
   $('.lamp_wrapper').css('width', lampWrapperHeight);
   $('.lamp_wrapper').css('height', lampWrapperHeight);
-  $('.lamp_wrapper div').css('width', lampWrapperHeight - 6);
-  $('.lamp_wrapper div').css('height', lampWrapperHeight - 6);
+  $('.lamp_wrapper div').css('width', lampWrapperHeight - 4);
+  $('.lamp_wrapper div').css('height', lampWrapperHeight - 4);
 
   lamps = document.getElementsByClassName('lamp_wrapper');
 

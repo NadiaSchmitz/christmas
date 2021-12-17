@@ -10,6 +10,10 @@ function PopUpHide() {
   $('.popup').hide();
 }
 
+//var windowsHeight = $(window).height();
 
+//var wrapperPopupMargin = (windowsHeight - 300) / 2;
+
+//$(".popup_content").css("margin-top", wrapperPopupMargin)
 
 
